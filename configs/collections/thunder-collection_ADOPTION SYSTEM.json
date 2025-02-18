@@ -1,0 +1,140 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ADOPTION SYSTEM",
+    "collectionId": "7997dad5-a6ca-4636-a224-7619194b526d",
+    "dateExported": "2025-02-14T09:02:18.758Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "88be6ea6-b671-4b58-8d0f-440ee4515303",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-14T07:20:30.448Z",
+            "modified": "2025-02-14T07:48:36.779Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"esamayoa@gmail.com\",\n  \"password\":\"1234568\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8871a887-0c06-441b-8bf2-0ea36ead537b",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "REGISTER",
+            "url": "",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-14T07:20:36.389Z",
+            "modified": "2025-02-14T07:20:36.389Z",
+            "headers": []
+        },
+        {
+            "_id": "cbd30923-902e-4b89-80bb-cddc38f14679",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "ADD DATE",
+            "url": "",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-14T07:23:28.616Z",
+            "modified": "2025-02-14T07:23:28.616Z",
+            "headers": []
+        },
+        {
+            "_id": "e7794488-0a7b-4d90-baaf-7a98d636dee5",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "UPDATE PASSWORD",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/update-password/67a3c6aa53724906c9705985",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-02-14T07:23:46.711Z",
+            "modified": "2025-02-14T07:27:05.296Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzk1MTgwMTgsImV4cCI6MTczOTUyMTYxOH0.Kkaot1etV-88tyB7e68GoHF-SLVhIpJ8uB2s0cSSoyk"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"password\": \"123456789\"\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "8b818da5-6a76-4459-bc96-371dbcba40ab",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "ADD DATE",
+            "url": "http://localhost:3000/adoptionSystem/v1/dates/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-02-14T07:32:47.438Z",
+            "modified": "2025-02-14T08:54:18.345Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzk1MjE3NTIsImV4cCI6MTczOTUyNTM1Mn0.M7tJhkM6BjCf37AypWiLHTy2rcooIa4PN-prNIIkZGI"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"esamayoa@gmail.com\",\n  \"petId\": \"67af045259156cb58387638e\",\n  \"date\": \"2025-02-14T10:00:00Z\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "d4f7d28b-11e7-4b8f-88e5-6e71cd187fd3",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "ADD PET",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2025-02-14T07:51:30.603Z",
+            "modified": "2025-02-14T08:40:46.435Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzk1MjA4MDEsImV4cCI6MTczOTUyNDQwMX0.ZpGnFxRIbDM6Cf1S-Niw4EEJv7Fl4CzbTL1bSV5HHZo"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Estrella\",\n  \"description\": \"French Puddle\",\n  \"age\": 3,\n  \"type\": \"PERRO\",\n  \"email\": \"esamayoa@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ed599b94-4b2c-4feb-867f-648b5debb931",
+            "colId": "7997dad5-a6ca-4636-a224-7619194b526d",
+            "containerId": "",
+            "name": "UPDATE PET",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67af045259156cb58387638e",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2025-02-14T08:52:08.317Z",
+            "modified": "2025-02-14T09:00:13.947Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzk1MjM2MDcsImV4cCI6MTczOTUyNzIwN30.W-5rhfk5wCCNn4P_5j8KSc1PvSvMRD94AHS_XsHcANA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Estrella\",\n  \"description\": \"French Puddle\",\n  \"age\": 3,\n  \"type\": \"PERRO\",\n  \"email\": \"esamayoa@gmail.com\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "Gg7MHueNYVAfry8zC6dqV1rVMWJK2crCX9_GkeY1PKES9po5Mn9uUxDtXmYHt8WhOSiO52DCQXp9cBeKATHzZA"
+}

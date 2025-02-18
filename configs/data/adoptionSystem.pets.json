@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "67a3c6ee53724906c970598c"
+  },
+  "name": "Max",
+  "description": "perro salchicha",
+  "age": 32,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a3c6aa53724906c9705985"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-05T20:15:42.995Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-05T20:15:42.995Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a3e34bb5a3674e8b323044"
+  },
+  "name": "Joaquin",
+  "description": "choloesquintle",
+  "age": 32,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a3c6aa53724906c9705985"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-05T22:16:43.344Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-05T22:17:16.637Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67af045259156cb58387638e"
+  },
+  "name": "Estrella",
+  "description": "French Puddle",
+  "age": 3,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a3c6aa53724906c9705985"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-14T08:52:34.113Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-14T09:00:13.926Z"
+  }
+}]

@@ -1,0 +1,142 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "adoption system V",
+    "collectionId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+    "dateExported": "2025-02-05T22:47:07.278Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dc0b026e-c550-4818-80ec-cc5871b07413",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "ELIMINAR",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67a24514c82d950ad1c25e25",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2025-02-05T19:08:41.127Z",
+            "modified": "2025-02-05T22:36:58.931Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzg3OTUwMDksImV4cCI6MTczODc5ODYwOX0.l5Xp4nPi01D7xgjM2gv1_Wx0gH7SD53jKifG3ScBJHg"
+                }
+            ]
+        },
+        {
+            "_id": "e481c348-2c57-4113-9757-f5eb2aa1c15f",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "LISTAR",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-05T19:15:07.725Z",
+            "modified": "2025-02-05T19:15:16.581Z",
+            "headers": []
+        },
+        {
+            "_id": "376b2071-2fcd-491b-91df-2dcd3b40882a",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "AGREGAR PETS",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-05T19:55:39.122Z",
+            "modified": "2025-02-05T22:16:43.350Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzg3OTM3MDgsImV4cCI6MTczODc5NzMwOH0.soQVo851x9v2mRJdYdmFEBR2N3dI89suDJBAdN--_1U"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Joaquin\",\n  \"description\": \"choloesquintle\",\n  \"age\": 32,\n  \"type\": \"perro\",\n  \"email\": \"esamayoa@gmail.com\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "436e9048-92e2-4cc8-9c3b-7f5e1aa228f2",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-05T20:16:20.639Z",
+            "modified": "2025-02-05T21:37:55.092Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": " \n{\n \n\n\n\n  \"email\": \"esamayoa@gmail.com\",\n \n  \"phone\": \"12345678\",\n \n  \"password\": \"1234568\"\n \n\n\n}\n\n ",
+                "form": []
+            }
+        },
+        {
+            "_id": "3b302695-1251-4cb6-a33d-485fc410058c",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "REGISTER",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-02-05T20:16:38.895Z",
+            "modified": "2025-02-05T22:46:54.045Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \n  \"name\": \"Joaquin\",\n \n  \"surname\": \"Figueroa\",\n \n  \"username\": \"Joaki\",\n \n  \"email\": \"hfigueroa@gmail.com\",\n \n  \"phone\": \"12345678\",\n \n  \"password\": \"1234568\",\n \n  \"role\": \"ADMIN_ROLE\",\n \n  \"profilePicture\": \"\"\n \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "55961054-c91f-4548-b6b0-4ff0890f5d3c",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "LISTAR PETS",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-02-05T20:43:08.444Z",
+            "modified": "2025-02-05T20:44:01.687Z",
+            "headers": []
+        },
+        {
+            "_id": "5c674502-3d2e-40c0-b48e-6affae599915",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "BUSQUEDA PETS",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67a3c6ee53724906c970598c",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2025-02-05T21:33:55.629Z",
+            "modified": "2025-02-05T21:38:09.728Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzg3OTE0NzUsImV4cCI6MTczODc5NTA3NX0.uf5s4PCLukxEWqO0z9LdzXWY8-Z-7r8KO1A4WXGMYK8"
+                }
+            ]
+        },
+        {
+            "_id": "e202ff8d-5456-4970-a377-885edb3617dc",
+            "colId": "f58fb2c6-8c32-4627-bdde-6dbb2aa89ec1",
+            "containerId": "",
+            "name": "ELIMINAR PETS",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67a3e34bb5a3674e8b323044",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2025-02-05T22:13:38.823Z",
+            "modified": "2025-02-05T22:17:16.656Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2EzYzZhYTUzNzI0OTA2Yzk3MDU5ODUiLCJpYXQiOjE3Mzg3OTM3MDgsImV4cCI6MTczODc5NzMwOH0.soQVo851x9v2mRJdYdmFEBR2N3dI89suDJBAdN--_1U"
+                }
+            ]
+        }
+    ],
+    "ref": "dqt491LW3Vgmw4jD6TRO5mn4S9J2FCxj-NubspK16u2MW-Kn0MXPA3Y9T7PgtH1uidXiNt9ke39mK7VoHrfADw"
+}
