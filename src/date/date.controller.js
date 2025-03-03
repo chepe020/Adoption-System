@@ -2,47 +2,49 @@ import Date from "../date/date.model.js";
 import Pet from "../pet/pet.model.js"; 
 import User from "../users/user.model.js"; 
 
+const obtenerUsuarioPorEmail = async (email) => {
+    const usuario = await User.findOne({ email });
+    if (!usuario) {
+        throw new Error("Propietario No Encontrado");
+    }
+    return usuario;
+};
+
+const obtenerMascotaPorId = async (petId) => {
+    const mascota = await Pet.findById(petId);
+    if (!mascota) {
+        throw new Error("Mascota No Encontrada");
+    }
+    return mascota;
+};
+
 export const createDate = async (req, res) => {
     try {
         const { email, petId, date } = req.body;
-
         console.log("Cuerpo de la solicitud para la cita:", req.body); 
 
-        const user = await User.findOne({ email });
-        if (!user) {
-            return res.status(400).json({
-                success: false,
-                message: "Propietario No Encontrado"
-            });
-        }
+        const usuario = await obtenerUsuarioPorEmail(email);
+        const mascota = await obtenerMascotaPorId(petId);
 
-        const pet = await Pet.findById(petId);
-        if (!pet) {
-            return res.status(400).json({
-                success: false,
-                message: "Mascota No Encontrada"
-            });
-        }
-
-        const newDate = new Date({
-            owner: user._id,
-            pet: pet._id,
-            date: date,
+        const nuevaCita = new Date({
+            owner: usuario._id,
+            pet: mascota._id,
+            date,
             status: true
         });
 
-        await newDate.save();
+        await nuevaCita.save();
 
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
-            date: newDate
+            date: nuevaCita
         });
     } catch (error) {
         console.error("Error al guardar la cita:", error);
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
-            message: "Error al guardar la cita",
-            error
+            message: error.message || "Error al guardar la cita"
         });
     }
-}
+};
+

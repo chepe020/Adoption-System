@@ -2,147 +2,150 @@ import { response, request } from "express";
 import { hash } from "argon2";
 import User from "./user.model.js";
 
-
-export const getUsers = async(req = request, res = response) => {
+export const getUsers = async (req = request, res = response) => {
     try {
-        const{limite = 10, desde = 0} = req.query;
+        const { limite = 10, desde = 0 } = req.query;
+        const query = { estado: true };
 
-        const query = {estado : true}
-
-        const[total, users] = await Promise.all([
+        const [total, users] = await Promise.all([
             User.countDocuments(query),
-            User.find(query)
-            .skip(Number(desde))
-            .limit(Number(limite))
-        ])
+            User.find(query).skip(Number(desde)).limit(Number(limite))
+        ]);
 
-        res.status(200).json({
-            succes: true,
+        return res.status(200).json({
+            success: true,
             total,
             users
-        })
+        });
     } catch (error) {
-        res.status(500).json({
+        console.error("Error al obtener usuarios:", error);
+        return res.status(500).json({
             success: false,
-            message: "Error Al Obtener Usuario",
+            message: "Error al obtener usuarios",
             error
-        })
+        });
     }
-}
+};
 
 export const getUserById = async (req, res) => {
     try {
-        const {id} = req.params;
-        const user = await User.findById(id);   
-        console.log("prueba1");
-        if(!user){
+        const { id } = req.params;
+        const user = await User.findById(id);
+
+        if (!user) {
             return res.status(404).json({
                 success: false,
-                msg: "Usuario Not Found"
-            })
+                message: "Usuario No Encontrado"
+            });
         }
 
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             user
-        })
+        });
     } catch (error) {
-        res.status(500).json({
-            success:false,
-            msg: "Error Al Obtener Usuario",
-            error
-        })
-    }
-}
-
-export const updateUser = async(req, res = response) => {
-    try {
-        const {id} = req.params;
-        const {_id, password, email, ...data} = req.body;
-
-        if(password){
-            data.password = await hash(password)
-        }
-
-        const user = await User.findByIdAndUpdate(id, data, {new: true});
-
-        res.status(200).json({
-            success: true,
-            msg: "Usuario Actualizado!",
-            user
-        })
-
-    } catch (error) {
-        res.status(500).json({
+        console.error("Error al obtener usuario:", error);
+        return res.status(500).json({
             success: false,
-            msg: "Error Al Actualizar User",
+            message: "Error al obtener usuario",
             error
-        })
+        });
     }
-}
+};
+
+export const updateUser = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const { _id, password, email, ...data } = req.body;
+
+        if (password) {
+            data.password = await hash(password);
+        }
+
+        const user = await User.findByIdAndUpdate(id, data, { new: true });
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Usuario No Encontrado"
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Usuario Actualizado",
+            user
+        });
+    } catch (error) {
+        console.error("Error al actualizar usuario:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Error al actualizar usuario",
+            error
+        });
+    }
+};
 
 export const updatePassword = async (req, res) => {
     try {
-        const { id } = req.params; 
+        const { id } = req.params;
         const { password } = req.body;
 
         if (!password) {
             return res.status(400).json({
-                success: false, 
-                msg: "La Contraseña No Coincide"
+                success: false,
+                message: "La contraseña no puede estar vacía"
             });
         }
 
-        // Crea la contraseña encriptada
         const encryptedPassword = await hash(password);
-
-        // Actualiza el usuario en la base de datos
         const user = await User.findByIdAndUpdate(id, { password: encryptedPassword }, { new: true });
 
         if (!user) {
-            return res.status(400).json({
+            return res.status(404).json({
                 success: false,
-                msg: "Usuario No Encontrado"
+                message: "Usuario No Encontrado"
             });
         }
 
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
-            msg: "Contraseña Actualizada Correctamente",
+            message: "Contraseña actualizada correctamente",
             user
         });
-
     } catch (error) {
-        console.error(error); // Para depuración
-        res.status(500).json({
+        console.error("Error al actualizar contraseña:", error);
+        return res.status(500).json({
             success: false,
-            msg: 'Error al Actualizar La Contraseña',
-            error  
+            message: "Error al actualizar la contraseña",
+            error
         });
     }
-}
+};
 
-
-export const deleteUser = async (req, res)=>{
+export const deleteUser = async (req, res) => {
     try {
-        const { id } = req.params
-        const user = await User.findByIdAndUpdate(id,{estado: false}, {new:true});
-        
-        const authenticatedUser = req.user
-        res.status(200).json({
-            succes: true,
-            msg: 'Usuario desactivado',
-            user,
-            authenticatedUser
-        })
+        const { id } = req.params;
+        const user = await User.findByIdAndUpdate(id, { estado: false }, { new: true });
 
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Usuario No Encontrado"
+            });
+        }
 
-
-        } catch (error) {
-            res.status(500).json({
-                succes:false,
-                msg:'Error al Desactivar El Usuario',
-                error  
-                })
-}
-}
+        return res.status(200).json({
+            success: true,
+            message: "Usuario desactivado exitosamente",
+            user
+        });
+    } catch (error) {
+        console.error("Error al desactivar usuario:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Error al desactivar usuario",
+            error
+        });
+    }
+};
