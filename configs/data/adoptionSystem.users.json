@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67d4fa60d725f841ef9aaeee"
+  },
+  "name": "jose",
+  "surname": "Alfredo",
+  "username": "chepe",
+  "email": "jose@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$dVBpW4qvYFhhtDSpUnpX2A$IbKnkiiQUCcvpNKBKW23Q6IsyHeiBPzCIq5tDaUKIoc",
+  "profile_picture": null,
+  "phone": "54622345",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d4fd0c92314ecacfc9a024"
+  },
+  "name": "Pablo",
+  "surname": "Paz",
+  "username": "cpaz",
+  "email": "cpail@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$KA9ghnWCbW/n/jY+zZ6mPg$xgTAMD51SKpb0rEmfG3OCZPTHi0MjDaSWZiO0K0lxX4",
+  "profile_picture": null,
+  "phone": "85749345",
+  "role": "USER_ROLE",
+  "estado": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d504bb92314ecacfc9a034"
+  },
+  "name": "Carlos",
+  "surname": "Toc",
+  "username": "tcal",
+  "email": "tcal@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$hhYslja7gg25ti5kBdNWSg$bQ+F16w4gJO9t1kge5Y9OloRqtn/TkAO7uxr+c/a3Xk",
+  "profile_picture": null,
+  "phone": "54622345",
+  "role": "ADMIN_ROLE",
+  "estado": false,
+  "google": false,
+  "__v": 0
+}]

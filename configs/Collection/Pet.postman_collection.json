@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "7c7ff36d-c5f2-422c-a84c-681511da4b9b",
+		"name": "Pet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560259"
+	},
+	"item": [
+		{
+			"name": "Agregar Pet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q0ZmE2MGQ3MjVmODQxZWY5YWFlZWUiLCJpYXQiOjE3NDIwMTM2ODksImV4cCI6MTc0MjAxNzI4OX0.yVCUGzs8KcWcaKrA-zJY2ahdJpu4h26_--oSfoKhoHw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Carlos\",\r\n    \"description\" : \"Quiero un Gato\",\r\n    \"age\" : 23,\r\n    \"type\":\"GATO\",\r\n    \"email\" : \"jose@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Pet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q0ZmE2MGQ3MjVmODQxZWY5YWFlZWUiLCJpYXQiOjE3NDIwMTM2ODksImV4cCI6MTc0MjAxNzI4OX0.yVCUGzs8KcWcaKrA-zJY2ahdJpu4h26_--oSfoKhoHw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Pablo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/:id?=67d5070e92314ecacfc9a03d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67d5070e92314ecacfc9a03d"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d5070e92314ecacfc9a03d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Pet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q0ZmE2MGQ3MjVmODQxZWY5YWFlZWUiLCJpYXQiOjE3NDIwMTM2ODksImV4cCI6MTc0MjAxNzI4OX0.yVCUGzs8KcWcaKrA-zJY2ahdJpu4h26_--oSfoKhoHw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/:id?=67d5088ec570bdc7829a0c2a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67d5088ec570bdc7829a0c2a"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d5088ec570bdc7829a0c2a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q0ZmE2MGQ3MjVmODQxZWY5YWFlZWUiLCJpYXQiOjE3NDIwMTM2ODksImV4cCI6MTc0MjAxNzI4OX0.yVCUGzs8KcWcaKrA-zJY2ahdJpu4h26_--oSfoKhoHw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/:id?=67d5070e92314ecacfc9a03d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						":id"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "67d5070e92314ecacfc9a03d"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d5070e92314ecacfc9a03d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar pet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

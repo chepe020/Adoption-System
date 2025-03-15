@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "67d50a50c570bdc7829a0c35"
+  },
+  "owner": {
+    "$oid": "67d4fa60d725f841ef9aaeee"
+  },
+  "pet": {
+    "$oid": "67d5070e92314ecacfc9a03d"
+  },
+  "date": {
+    "$date": "1970-01-01T00:00:02.025Z"
+  },
+  "status": true,
+  "__v": 0
+}]

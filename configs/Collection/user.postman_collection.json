@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b942711a-0a34-440e-9e85-b6ffc96a4e16",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560259"
+	},
+	"item": [
+		{
+			"name": "Mostrar usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/findUser/:id?=67d4fa60d725f841ef9aaeee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						"findUser",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67d4fa60d725f841ef9aaeee"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d4fa60d725f841ef9aaeee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar por Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pablo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/:id?=67d4fd0c92314ecacfc9a024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						":id"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "67d4fd0c92314ecacfc9a024"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d4fd0c92314ecacfc9a024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2Q0ZmE2MGQ3MjVmODQxZWY5YWFlZWUiLCJpYXQiOjE3NDIwMTM2ODksImV4cCI6MTc0MjAxNzI4OX0.yVCUGzs8KcWcaKrA-zJY2ahdJpu4h26_--oSfoKhoHw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/:id?=67d504bb92314ecacfc9a034",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "67d504bb92314ecacfc9a034"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d504bb92314ecacfc9a034"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "67d5070e92314ecacfc9a03d"
+  },
+  "name": "Pablo",
+  "description": "Quiero un perro",
+  "age": 23,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67d4fa60d725f841ef9aaeee"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-15T04:50:22.941Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T04:55:57.860Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d5088ec570bdc7829a0c2a"
+  },
+  "name": "Carlos",
+  "description": "Quiero un Gato",
+  "age": 23,
+  "type": "GATO",
+  "keeper": {
+    "$oid": "67d4fa60d725f841ef9aaeee"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-03-15T04:56:46.672Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T04:58:17.804Z"
+  }
+}]
